@@ -20,5 +20,53 @@ a {
 .container {
     margin: 0 auto;
     padding: 0 15px;
-    width: 1140px;
+    max-width: 1140px;
+
+    &--sm {
+        max-width: 840px;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.none {
+    display: none !important;
+}
+
+
+.title-2 {
+    font-size: 36px;
+    font-family: $font-accent;
+    color: $accent;
+    font-weight: 700;
+    
+    // Problem with UNDEFINED MIXIN (???)
+    // @include mediaTablet {
+    //     font-size: 28px;
+    // }
+
+    @media screen and (max-width: $tablet) {
+        font-size: 28px;;
+    }
+}
+
+.link-bold {
+    color: $accent;
+    font-weight: 700;
+}
+
+.no-scroll {
+    overflow-y: hidden;
 }
